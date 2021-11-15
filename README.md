@@ -189,3 +189,31 @@ Relative error (%) : 0.46%
 ---------------------------------------------
 Response Time (ms) : 235 ms
 ```
+#### Our Method For Complex Search(Type Of Chain)
+
+Our proposed method, with a path to the test_data folder, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
+
+```
+java -jar rdf_computer.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
+```
+
+For the query example, "How many players play for the Spanish team？", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
+
+```
+java -jar rdf_computer.jar  /home/star/ysz Spain ground soccerclub team soccerplayer Count All
+```
+Output
+
+For our method, we output the following statistical results and each part of running time for each query round by round If the result does not meet the error rate requirement. Here is the output of the above query example:
+
+```
+子图框定时间为:470
+构建子图时间为:40
+计算转移矩阵花费时间为78
+计算稳态花费时间为365
+搜索花费时间为245
+采样花费时间为23
+误差e为:0.9771168563740347
+计数结果为:1400
+
+```
