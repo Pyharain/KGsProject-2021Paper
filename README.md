@@ -207,13 +207,12 @@ Output
 For our method, we output the following statistical results and each part of running time for each query round by round If the result does not meet the error rate requirement. Here is the output of the above query example:
 
 ```
-子图框定时间为:470
-构建子图时间为:40
-计算转移矩阵花费时间为78
-计算稳态花费时间为365
-搜索花费时间为245
-采样花费时间为23
-误差e为:0.9771168563740347
-计数结果为:1400
+-------------------Round 1-------------------
+Ground-truth :1391.0
+Approximate result :1400.0
+Margin of error (MoE) :0.9963230363893444
+Relative error(%):0.6470165348670022%
+---------------------------------------------
+
 
 ```
