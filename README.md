@@ -210,9 +210,8 @@ For our method, we output the following statistical results and each part of run
 -------------------Round 1-------------------
 Ground-truth :1391.0
 Approximate result :1400.0
-Margin of error (MoE) :0.9963230363893444
+Margin of error (MoE) :0.9917960289345564
 Relative error(%):0.6470165348670022%
 ---------------------------------------------
-
-
+Response Time(ms):1151
 ```
