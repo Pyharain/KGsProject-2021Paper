@@ -215,3 +215,55 @@ Relative error(%):0.6470165348670022%
 ---------------------------------------------
 Response Time(ms):1151
 ```
+#### Our Method For Complex Search(Type Of Circle)
+
+Our proposed method, with a path to the test_data folder, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
+
+```
+java -jar rdf_computer.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
+```
+
+For the query example, "How many players play for the Spanish team？", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
+
+```
+java -jar rdf_computer.jar  /home/star/ysz Spain ground soccerclub team soccerplayer Count All
+```
+Output
+
+For our method, we output the following statistical results and each part of running time for each query round by round If the result does not meet the error rate requirement. Here is the output of the above query example:
+
+```
+-------------------Round 1-------------------
+Ground-truth :258690.84285714282
+Approximate result :259375.290625
+Margin of error (MoE) :22368.67796457354
+Relative error(%):0.26458136681519284%
+---------------------------------------------
+Response Time(ms):8963
+```
+#### Our Method For Complex Search(Type Of Circle)
+
+Our proposed method, with a path to the test_data folder, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
+
+```
+java -jar rdf_computer.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
+```
+
+For the query example, "How many players play for the Spanish team？", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
+
+```
+java -jar rdf_computer.jar  /home/star/ysz Spain ground soccerclub team soccerplayer Count All
+```
+Output
+
+For our method, we output the following statistical results and each part of running time for each query round by round If the result does not meet the error rate requirement. Here is the output of the above query example:
+
+```
+-------------------Round 1-------------------
+Ground-truth :258690.84285714282
+Approximate result :259375.290625
+Margin of error (MoE) :22368.67796457354
+Relative error(%):0.26458136681519284%
+---------------------------------------------
+Response Time(ms):8963
+```
