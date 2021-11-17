@@ -191,16 +191,16 @@ Response Time (ms) : 235 ms
 ```
 #### Our Method For Complex Search(Type Of Chain)
 
-Our proposed method, with a path to the test_data folder, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
+Our proposed method, with a path to the test_data folder,the name of dataset, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
 
 ```
-java -jar rdf_computer.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
+java -jar Approximate-Aggregation-Chain-Queries-jar-with-dependencies.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
 ```
 
 For the query example, "How many players play for the Spanish team？", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
 
 ```
-java -jar rdf_computer.jar  /home/star/ysz Spain ground soccerclub team soccerplayer Count All
+java -jar rdf_computer.jar  /home/star/ysz Dbpedia Spain ground soccerclub team soccerplayer Count All
 ```
 Output
 
@@ -217,42 +217,16 @@ Response Time(ms):1151
 ```
 #### Our Method For Complex Search(Type Of Circle)
 
-Our proposed method, with a path to the test_data folder, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
+Our proposed method, with a path to the test_data folder,the name of dataset, a specific entity, three predicates, three types of target entities, a aggregate function and a type of attributes, can be run using the following command:
 
 ```
-java -jar rdf_computer.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
+java -jar Approximate-Aggregation-Circle-Queries-jar-with-dependencies.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <third-predicate> <third-target-entity-type> <aggregate-function> <target-attribute>
 ```
 
-For the query example, "How many players play for the Spanish team？", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
+For the query example, "What is the average value of German players playing for a German team?", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
 
 ```
-java -jar rdf_computer.jar  /home/star/ysz Spain ground soccerclub team soccerplayer Count All
-```
-Output
-
-For our method, we output the following statistical results and each part of running time for each query round by round If the result does not meet the error rate requirement. Here is the output of the above query example:
-
-```
--------------------Round 1-------------------
-Ground-truth :258690.84285714282
-Approximate result :259375.290625
-Margin of error (MoE) :22368.67796457354
-Relative error(%):0.26458136681519284%
----------------------------------------------
-Response Time(ms):8963
-```
-#### Our Method For Complex Search(Type Of Circle)
-
-Our proposed method, with a path to the test_data folder, a specific entity, two predicates, two types of target entities, a aggregate function and a type of attributes, can be run using the following command:
-
-```
-java -jar rdf_computer.jar <file-path> <specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <aggregate-function> <target-attribute>
-```
-
-For the query example, "How many players play for the Spanish team？", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
-
-```
-java -jar rdf_computer.jar  /home/star/ysz Spain ground soccerclub team soccerplayer Count All
+java -jar rdf_computer.jar  /home/star/ysz Dbpedia Germany ground soccerclub team soccerplayer nationality soccerplayer Avg Value
 ```
 Output
 
@@ -266,4 +240,30 @@ Margin of error (MoE) :22368.67796457354
 Relative error(%):0.26458136681519284%
 ---------------------------------------------
 Response Time(ms):8963
+```
+#### Our Method For Complex Search(Type Of Flower)
+
+Our proposed method, with a path to the test_data folder,the name of dataset, two specific entities, four predicates, four types of target entities, a aggregate function and a type of attributes, can be run using the following command:
+
+```
+java -jar rdf_computer.jar  <file-path> <first-specific-entity> <first-predicate> <first-target-entity-type> <second-predicate> <second-target-entity-type> <third-predicate> <third-target-entity-type> <second-specific-entity> <fourth-predicate> <fourth-target-entity-type> <aggregate-function> <target-attribute>
+```
+
+For the query example, "What is the average horsepower of a car jointly industry by China and Germany and assembled by a German company?", if the path of test_data folder is"/home/star/ysz",we can run with the following command:
+
+```
+java -jar Approximate-Aggregation-Flower-Queries-jar-with-dependencies.jar  /home/star/ysz Dbpedia Germany assembly company assembly automobile industry automobile China industry automobile Avg Horse
+```
+Output
+
+For our method, we output the following statistical results and each part of running time for each query round by round If the result does not meet the error rate requirement. Here is the output of the above query example:
+
+```
+-------------------Round 1-------------------
+Ground-truth :135.5
+Approximate result :135.35294117647
+Margin of error (MoE) :0.5684278541
+Relative error(%):0.108560885608864%
+---------------------------------------------
+Response Time(ms):6871
 ```
